@@ -1,0 +1,144 @@
+/*******************************************************************
+* Stylesheet
+********************************************************************
+
+  Table of Content (#)
+
+  - Header
+  - Fonts
+
+*/
+
+
+*,
+html,
+body {
+  box-sizing: border-box;
+}
+
+
+/* 
+* #Header
+*================================================================*/
+.header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.header__outer {
+  width: 1150px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  
+}
+
+.header__inner {
+  display: flex;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 246px;
+  height: 81px;
+  box-shadow: 0 0 0 #000;
+  object-fit: cover;
+  margin-top: 6px;
+}
+
+/* Main Navigation
+============================================*/
+.main-nav {
+  display: flex;
+
+}
+
+.main-nav__link {
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  font-family: wf_4483fabebe464a99a3335837a;
+  padding: 0 33px;
+}
+
+.main-nav__link:first-child {
+  padding: 0 20px;
+}
+
+.main-nav__link:nth-child(2) {
+  padding: 0 36px;
+}
+
+.main-nav__link:nth-child(3) {
+  padding: 0 26px;
+}
+
+
+.main-nav__link:nth-child(4) {
+  padding: 0 26px;
+}
+
+
+/* 
+* #Fonts
+*================================================================*/
+
+/* Used for Navigation Links */
+@font-face {
+  font-display: swap;
+  font-family: wf_4483fabebe464a99a3335837a;
+  src: url("https://static.wixstatic.com/ufonts/234f58_4483fabebe464a99a3335837a7f28c98/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/234f58_4483fabebe464a99a3335837a7f28c98/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/234f58_4483fabebe464a99a3335837a7f28c98/ttf/file.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "DIN-Next-W01-Light";
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix") format("eot"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN-Next-W02-Light";
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/48e5a0e1-2d56-46e5-8fc4-3d6d5c973cbf.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/48e5a0e1-2d56-46e5-8fc4-3d6d5c973cbf.eot?#iefix") format("eot"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/07d62b21-8d7a-4c36-be86-d32ab1089972.woff") format("woff"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/c0050890-bbed-44b9-94df-2611d72dbb06.ttf") format("truetype"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/9f774d17-c03a-418e-a375-34f3beecbc7a.svg#9f774d17-c03a-418e-a375-34f3beecbc7a") format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN-Next-W10-Light";
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3d009cd7-c8fe-40c0-93da-74f4ea8c530b.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3d009cd7-c8fe-40c0-93da-74f4ea8c530b.eot?#iefix") format("eot"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/a9e95a29-98a7-404a-90ee-1929ad09c696.woff") format("woff"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0a7663fd-eae8-4e50-a67a-225271f8cceb.ttf") format("truetype"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/58ae9be9-5d95-44b6-8b6c-e6da6a46822c.svg#58ae9be9-5d95-44b6-8b6c-e6da6a46822c") format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_20470300465d468db5d18fb8e;
+  src: url("https://static.wixstatic.com/ufonts/ab8a4b_20470300465d468db5d18fb8e6407a10/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/ab8a4b_20470300465d468db5d18fb8e6407a10/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/ab8a4b_20470300465d468db5d18fb8e6407a10/ttf/file.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_fef7e03344ab444aa80e00eb1;
+  src: url("https://static.wixstatic.com/ufonts/9f6de3_fef7e03344ab444aa80e00eb19c41e51/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/9f6de3_fef7e03344ab444aa80e00eb19c41e51/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/9f6de3_fef7e03344ab444aa80e00eb19c41e51/ttf/file.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_78c63c9c355f45eab67fd32f7;
+  src: url("https://static.wixstatic.com/ufonts/234f58_78c63c9c355f45eab67fd32f7bb20786/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/234f58_78c63c9c355f45eab67fd32f7bb20786/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/234f58_78c63c9c355f45eab67fd32f7bb20786/ttf/file.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Proxima-N-W01-Reg";
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2") format("woff2"),url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff") format("woff");
+  font-display: swap;
+}

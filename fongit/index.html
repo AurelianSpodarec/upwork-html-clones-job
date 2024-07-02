@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" sizes="192x192" href="./assets/images/favicon.png" type="image/png">
+  <style>
+    @font-face {
+      font-family: 'Simplon Mono';
+      src: url('./assets/fonts/simplonMono/SimplonMono-Medium.woff2') format('woff2');
+      font-style: 500;
+    }
+
+    @font-face {
+      font-family: 'Basier Circle';
+      src: url('./assets/fonts/basierCircle/BasierCircle-Regular.woff2') format('woff2');
+      font-style: 400;
+    }
+
+    :root {
+      --font-simplon-mono: 'Simplon Mono', monospace;
+      --font-basier-circle: 'Basier Circle', sans-serif;
+    }
+  </style>
+   <style>
+    /* Add your CSS styles here */
+    .chat-box {
+      height: 437px;
+      overflow-y: auto;
+    }
+    .message {
+      margin-bottom: 20px;
+    }
+    .message.user .message-content {
+      background-color: #2E4DF9;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .message.bot .message-content {
+      background-color: white;
+      border: 1px solid #2E4DF9;
+      color: black;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Reusable Colors
+    const colors = {
+      brand: "#3040ff",
+      "brand200": "#babfff",
+    };
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: colors.brand,
+            // HEADER
+            // ==============================
+            header: "#fafafa",
+            // NAVIGATION
+            // ----------------------
+            nav: {
+              "link-foreground-default": "",
+              "link-foreground-hover": colors.brand,
+              "link-foreground-current": colors.brand,
+            },
+            footer: {
+              "button-foreground-default": "#000",
+              "button-foreground-hover": "#fff",
+              "button-bg-default": "#fff",
+              "button-bg-hover": colors.brand200,
+            }
+          },
+          letterSpacing: {
+            default: '0.03em',
+          },
+          fontFamily: {
+            primary: ['var(--font-simplon-mono)'],
+            secondary: ['var(--font-basier-circle)'],
+          },
+          transitionDuration: {
+            default: '0.4s',
+          },
+        },
+      },
+      safelist: [
+        "text-red-500",
+        "text-nav-link-foreground-current",
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <header class="h-[88px] fixed top-0 w-full z-10 bg-header">
+    <div class="max-w-[1133px] mx-auto">
+      <div class="flex">
+        <img src="./assets/images/logo.webp" alt="Logo" class="w-[246px] h-[81px] mt-[7px] object-cover" />
+        <nav class="flex items-center ml-[-9.5px]">
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover text-nav-link-foreground-current w-[137px]">What we do</a>
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover w-[98px]">Apply</a>
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover w-[82px]">Fif</a>
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover w-[153px]">Our Startups</a>
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover w-[105px]">Events</a>
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover w-[90px]">News</a>
+          <a class="text-center cursor-pointer font-primary font-medium uppercase text-[13px] transition-colors duration-default ease-in-out text-nav-link-foreground-default hover:text-nav-link-foreground-hover w-[120px]">About Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="pt-[90px]">
+    <section class="h-[647px]" style="background: radial-gradient(circle at 94.35384114583333% 89.61588541666666%, #FAFAFA 0%, 7.5%, rgba(250,250,250,0) 15%), radial-gradient(circle at 4.772135416666667% 8.014322916666666%, rgba(48,64,255,0.99) 0%, 25%, rgba(48,64,255,0) 50%), radial-gradient(circle at 0% 100%, #000000 0%, 42%, rgba(0,0,0,0) 70%), radial-gradient(circle at 93.6865234375% 11.42578125%, #3040FF 0%, 42%, rgba(48,64,255,0) 70%), radial-gradient(circle at 48.9013671875% 49.521484375%, #FFFFFF 0%, 100%, rgba(255,255,255,0) 100%);">
+      <div class=" max-w-[980px] mx-auto pt-[90.5px]">
+        <h1 class="text-[102px] font-primary text-white tracking-[0.05em] leading-[1.2em]">THE INNOVATION PLATFORM</h1>
+        <p class="font-secondary text-[23px] text-white max-w-[550px] tracking-[0.05em] leading-[1.41em]">We support entrepreneurs with the expertise, resources and financing they need in transforming innovative ideas into sustainable companies.</p>
+        <a href="https://www.fongit.ch/apply" class="inline-block font-secondary bg-brand hover:bg-[#98a0ff] transition-colors duration-default ease-in-out uppercase mt-[27px] text-[20px] px-[16px] py-[5px] text-white">Apply to Fongit</a>
+      </div>
+      </section>
+    <div class="h-[800px]">
+      <div class="chat-box"></div>
+      <input type="text" id="user-input" placeholder="Type your question ...">
+      <button id="send-button">Send</button>
+    </div>
+  </main>
+  <footer class="relative py-[59px] h-[428.9px]"
+    style="
+      background: 
+        radial-gradient(circle at 94.35384114583333% 89.61588541666666%, #FAFAFA 0%, 11%, rgba(250,250,250,0) 22%), 
+        radial-gradient(circle at 6.503906249999999% 88.037109375%, rgba(48,64,255,0.99) 0%, 27.5%, rgba(48,64,255,0) 55%), 
+        radial-gradient(circle at 6.165364583333333% 12.617187499999998%, #242323 0%, 50.4%, rgba(36,35,35,0) 84%), 
+        radial-gradient(circle at 93.6865234375% 11.42578125%, #3040FF 0%, 42%, rgba(48,64,255,0) 70%),
+        radial-gradient(circle at 48.9013671875% 49.521484375%, #FFFFFF 0%, 100%, rgba(255,255,255,0) 100%)
+      "
+    >
+    <div class="max-w-[980px] mx-auto">
+      <div class="flex">
+        <img src="assets/images/animated-logo.gif" alt="Animated Logo" class="h-[172px] w-[172px] object-cover" />
+        <div class="ml-[73px] mt-[11px] max-w-[205px] text-white">
+          <div class="flex flex-col font-secondary font-normal">
+            <div class="">
+                <p class="text-[15px] leading-[1.3em]">Fondation Genevoise pour l&#x27;Innovation Technologique</p>
+                <p class="text-[15px] leading-[1.35em]">(FONGIT)</p>
+                <div class="-mt-[1px]">
+                  <p class="text-[14px] tracking-default leading-[1.35em]">Route de la Galaise 34</p>
+                  <p class="text-[14px] tracking-default leading-[1.25em]">1228 Plan-les-Ouates</p>
+                  <p class="text-[14px] tracking-default leading-[1.2em]">Geneva, Switzerland</p>
+                </div>
+            </div>
+          </div>
+          <div class="mt-[18.5px] text-sm font-secondary font-normal">
+            <a href="tel:+41225523000" class="block tracking-default underline">T +41 22 552 30 00</a>
+            <a href="mailto:info@fongit.ch" class="block tracking-default underline mt-[16px]">info@fongit.ch</a>
+          </div>
+        </div>
+        <div>
+          <div class="font-secondary leading-[1.3em] text-white pl-[22px] pt-[30.5px] text-sm tracking-default">
+            <p>Campus Biotech Innovation Park</p>
+            <p>Avenue de Sécheron 15</p>
+            <p class="m-[0.5px] -ml-[0.1px]">1202 Geneva - Switzerland</p>
+          </div>
+          <a href="https://fongit.us9.list-manage.com/subscribe?u=04cca615b4e903d4a33567d05&amp;id=b41784d2b7"
+            class="font-secondary leading-6 px-[46.5px] h-[40px] flex items-center mt-[32px] ml-[8.5px] uppercase text-lg transition-colors duration-default ease-in-out text-footer-button-foreground-default hover:text-footer-button-foreground-hover bg-footer-button-bg-default hover:bg-footer-button-bg-hover shadow-[0_1px_2px_rgba(0,0,0,0.6),0_1px_2px_rgba(0,0,0,0.6)]">
+            <span class="-ml-[0.5px]">Sign up for our newsletter</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class=" max-w-[972px] mx-auto pt-[45px]">
+      <div class="flex justify-end">
+        <div class="flex flex-col">
+          <ul class="flex space-x-2.5">
+            <a target="self" href="https://www.instagram.com/fongit.ch/?hl=en">
+              <img src="./assets/images/icons/instagram.webp" alt="Instagram" class="w-[39px] h-[39px]" />
+            </a>
+            <a target="self" href="https://www.linkedin.com/company/2869033/admin/">
+              <img src="./assets/images/icons/linkedin.webp" alt="LinkedIn" class="w-[39px] h-[39px]" />
+            </a>
+            <a target="self" href="https://www.facebook.com/fongit.ch">
+              <img src="./assets/images/icons/facebook.webp" alt="FaceBook" class="w-[39px] h-[39px]" />
+            </a>
+            <a target="self" href="https://x.com/Fongit1">
+              <img src="./assets/images/icons/x.webp" alt="X/Twitter" class="w-[39px] h-[39px]" />
+            </a>
+            <a target="self" href="https://www.youtube.com/channel/UCgl7FrBtln8rBkwQ4iXHZ1g">
+              <img src="./assets/images/icons/youtube.webp" alt="YouTube" class="w-[39px] h-[39px]" />
+            </a>
+          </ul>
+          <div>
+            <p class="w-[235px] text-white text-[15px] font-secondary leading-[19.2px] pt-[22.5px] pl-[15px]">With the support of the Canton of Geneva</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <p class="text-white leading-[18px] text-[11px] pr-[29px] font-secondary">Proudly innovating in Geneva. © 2024 FONGIT</p>
+    </div>
+  </footer>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

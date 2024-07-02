@@ -1,0 +1,63 @@
+.navigation-wrapper,.breadcrumb,aside,header img,.cookie-message,.mobile-navigation,.report-page__sub-nav,.hide,.print-hide {
+  display: none;
+  visibility: hidden
+}
+
+.grid-x>.small-1,.grid-x>.small-2,.grid-x>.small-3,.grid-x>.small-4,.grid-x>.small-5,.grid-x>.small-6,.grid-x>.small-7,.grid-x>.small-8,.grid-x>.small-9,.grid-x>.small-10,.grid-x>.small-11,.grid-x>.small-12,.grid-x>.medium-1,.grid-x>.medium-2,.grid-x>.medium-3,.grid-x>.medium-4,.grid-x>.medium-5,.grid-x>.medium-6,.grid-x>.medium-7,.grid-x>.medium-8,.grid-x>.medium-9,.grid-x>.medium-10,.grid-x>.medium-11,.grid-x>.medium-12 .grid-x>.large-1,.grid-x>.large-2,.grid-x>.large-3,.grid-x>.large-4,.grid-x>.large-5,.grid-x>.large-6,.grid-x>.large-7,.grid-x>.large-8,.grid-x>.large-9,.grid-x>.large-10,.grid-x>.large-11,.grid-x>.large-12 {
+  display: block;
+  width: 100%
+}
+
+.grid-margin-x>.large-offset-3 {
+  margin-left: 0;
+  margin-right: 0
+}
+
+body {
+  background: #fff;
+  font-family: "Georgia","Times New Roman",Times,serif;
+  font-weight: 300;
+  line-height: 1.6rem;
+  color: #333
+}
+
+body.en div.page::before {
+  content: url('/_Site/Images/print_logo_en.jpg')
+}
+
+body.fr div.page::before {
+  content: url('/_Site/Images/print_logo_fr.jpg')
+}
+
+a:after {
+  content: " + " attr(href) " ";
+  color: gray;
+  font-weight: normal;
+  font-size: 80%
+}
+
+.content,.page {
+  width: 100%;
+  margin: 0;
+  float: none
+}
+
+.report-page {
+  padding-top: 0!important
+}
+
+.report-page:before,.report-page:after {
+  background-image: none!important
+}
+
+@page {
+  margin: 2cm
+}
+
+@page:left {
+  margin: 2cm
+}
+
+@page:right {
+  margin: 2cm
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" sizes="192x192" href="./assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+    
+  <style>
+    @font-face {
+      font-family: 'Simplon Mono';
+      src: url('./assets/fonts/simplonMono/SimplonMono-Medium.woff2') format('woff2');
+      font-style: 500;
+    }
+
+    @font-face {
+      font-family: 'Basier Circle';
+      src: url('./assets/fonts/basierCircle/BasierCircle-Regular.woff2') format('woff2');
+      font-style: 400;
+    }
+
+    :root {
+      --font-roboto: 'Roboto', monospace;
+      --font-roboto-second: "Roboto Condensed", sans-serif;
+    }
+  </style>
+  <style>
+
+  </style>
+
+  <link href="./styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Reusable Colors
+    const colors = {
+      brand: "#009edb",
+      brand700: "#0054ca"
+    };
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: colors.brand,
+            "brand-700": colors.brand700,
+            // HEADER
+            // ==============================
+            header: "#fafafa",
+            button: {
+              primary: {
+                "foreground-default": "#fff",
+                "foreground-hover": "#fff",
+                "bg-default": colors.brand,
+                "bg-hover": colors.brand700
+              }
+            },
+          },
+          fontFamily: {
+            primary: ['var(--font-roboto)'],
+            secondary: ['var(--font-roboto-second)']
+          },
+        },
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav id="brand-bar" class="fixed top-0 bg-[#f2f2f2] border-b-[5px] border-brand w-full z-10" role="navigation">
+    <!-- UN global brand bar -->
+    <div class="flex items-center px-[30px] md:px-[60px] justify-between h-[35px]">
+      <div class="">
+        <a class="flex items-center align-center space-x-2 tracking-[0.35px]" href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-[35px] mb-[0.8px] w-[20.6px]"
+            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+          </svg>
+          <span class="text-[12.35px]">Welcome to the United Nations</span>
+        </a>
+      </div>
+      <div class="hidden md:block" id="language-switcher">
+        <nav role="navigation">
+          <ul class="" role="menu">
+            <ul class="flex items-center text-[12.35px] tracking-[0.34px] space-x-6 mr-3">
+              <li class="ar first"><a href="/ar" class="language-link" xml:lang="ar" role="menuitem">العربية</a></li>
+              <li class="zh-hans"><a href="/zh" class="language-link" xml:lang="zh-hans" role="menuitem">中文</a></li>
+              <li class="en active"><a href="/en" class="language-link active font-bold" xml:lang="en"
+                  role="menuitem">English</a>
+              </li>
+              <li class="fr"><a href="/fr" class="language-link" xml:lang="fr" role="menuitem">Français</a></li>
+              <li class="ru"><a href="/ru" class="language-link" xml:lang="ru" role="menuitem">Русский</a></li>
+              <li class="es last"><a href="/es" class="language-link" xml:lang="es" role="menuitem">Español</a></li>
+            </ul>
+          </ul>
+        </nav>
+      </div>
+    </div><!-- /.container -->
+  </nav>
+
+  <header id="navbar" class="mt-[80px] hidden md:block">
+    <div class="max-w-[1350px] mx-auto px-[1px] relative">
+
+      <div class="flex justify-between items-center ">
+        <div class="flex items-center align-center">
+          <div>
+            <a href="https://www.un.org/en/" title="Home" class="block bar border-r-[1.5px] border-black mr-[20px] pr-[10px]">
+              <!-- <div class="bg-no-repeat bg-cover mb-6 md:mb-0 h-[71px] w-[273px] mx-auto md:mx-0"
+              style="background-image: url('https://www.un.org/sites/un2.un.org/themes/bootstrap_un2/images/logo-en.svg')"> -->
+              <img class="mb-6 md:mb-0 h-[78px] w-[274px] mx-auto md:mx-0"
+                src="https://www.un.org/sites/un2.un.org/themes/bootstrap_un2/images/logo-en.svg" />
+              <!-- <img/ -->
+              <!-- </div> -->
+            </a>
+          </div>
+          <a class="text-[#4d4d4d] text-[27px] font-secondary font-bold leading-[1em] mt-[20px] tracking-[0.7px] "
+            href="/en">Peace, dignity and equality <br>on a
+            healthy
+            planet</a>
+        </div>
+
+        <div class="flex mt-[10px] mr-[15px] hidden lg:flex">
+          <a href="" class="text-[12px] font-semibold  font-secondary tracking-[1.8px] h-[34px] px-[22px] mr-[15px] rounded-[4px] flex items-center align-center text-center mx-autp border border-[#FF0000] block">UN Web TV</a>
+          <div>
+            <div class="flex flex-col">
+
+              <div class="flex">
+                <input placeholder="Search"
+                  class="h-[34px] w-[274px] font-secondary border border-[#ddd] rounded-[3px] p-2 shadow-inner rounded-br-[0px] rounded-tr-[0px] shadow-[inset_0_1px_3px_rgba(0,0,0,0.06)] text-[14px] text-[#555] " />
+                <button class="border w-[54px] border-brand uppercase rounded-tl-[0px] rounded-bl-[0px] rounded-[4px] px-[8px] py-[4px] h-[34px]">
+                  <svg class="h-[12px] mx-auto" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg>
+                </button>
+              </div>
+              <p class="ml-auto text-[12px] text-[#666] font-medium mr-[6px]">A-Z Site Index</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-[99px]">
+    <section>
+      <div class="relative isolate">
+
+        <div class="">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <div class="mx-auto max-w-2xl text-center">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Ask any question to chat bot about
+                United Nations</h1>
+              <p class="mt-6 text-lg leading-8 text-gray-600">Chatbox is powered with AI and has the ability to answer
+                any questions about the website and United Nations. </p>
+              <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a href="#chatbox"
+                  class="flex items-center text-button-primary-foreground-default bg-button-primary-bg-default hover:bg-button-primary-bg-hover border border-brand hover:border-brand-700 transition duration-[250ms] ease-in-out rounded-full h-10 px-6 font-bold">Try
+                  chatbox now</a>
+              </div>
+            </div>
+
+            <div id="chatbox" class="flow-root sm:mt-24">
+
+              <div class="h-[500px] mt-[99px]">
+                Chatbox
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="mx-auto border-t-brand border-t-[0.25rem] bg-[#333333]">
+    <footer class="max-w-[1350px] px-8 md:px-0 mx-auto pt-[31.8px] pb-[2.3rem]">
+      <div class="row"><!-- row -->
+        <div class="md:flex  justify-between items-center align-baseline">
+
+          <div class=""><!-- footer brand -->
+            <a href="https://www.un.org/en/" title="Home" class="block">
+              <div class="bg-no-repeat bg-cover mb-6 md:mb-0 h-[52px] w-[170px] mx-auto md:mx-0"
+                style="background-image: url('https://www.un.org/sites/un2.un.org/themes/bootstrap_un2/images/logo-en-reverse.svg')">
+                <!-- <img src="https://www.un.org/sites/un2.un.org/themes/bootstrap_un2/images/logo-en-reverse.svg" /> -->
+              </div>
+            </a>
+          </div><!-- /footer brand -->
+
+          <div class="flex items-center align-center ">
+            <div class="flex flex-row items-center align-center mx-auto md:mx-0" role="navigation"><!-- social media links -->
+              <ul class="flex flex-wrap space-x-[28px] mt-[15px]">
+                <li class="h-[24px] fill-[#c4c4c4] facebook">
+                  <a href="https://www.facebook.com/unitednations">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="h-[24px] fill-[#c4c4c4] twitter"><a href="http://twitter.com/un">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                    </svg>
+                  </a></li>
+                <li class="h-[24px] fill-[#c4c4c4] youtube"><a href="http://www.youtube.com/unitednations">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                    </svg>
+                  </a></li>
+                <li class="h-[24px] fill-[#c4c4c4] flickr"><a href="http://www.flickr.com/photos/un_photo/">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM144.5 319c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5zm159 0c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5z" />
+                    </svg>
+                  </a></li>
+                <li class="h-[24px] fill-[#c4c4c4] instagram"><a href="http://instagram.com/unitednations">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                  </a></li>
+              </ul>
+            </div><!-- /social media links -->
+            <div class="hidden md:block border-l border-grey pl-[20px] ml-[58px] mt-[6px] mr-[4px]">
+              <a href="https://www.un.org/en/about-us/how-to-donate-to-the-un-system"
+                class=" bg-white border border-brand font-bold tracking-[1.27px] uppercase py-[12px] px-[20px] rounded-[4px] pt-[6px] text-[11px] mr-[13px]"
+                role="button" id="donate_button">Donate</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+      <div class="row footer-links"><!-- row -->
+        <hr class="mt-[16px] py-[10px] border-t border-t-[#5b5b5b]" /><!-- top border -->
+        <div class="flex" role="navigation">
+          <ul
+            class="md:ml-auto space-y-6 md:space-y-0 md:flex mx-auto text-center md:mx-0 md:text-right text-white tracking-[0.77px] text-[12px] uppercase font-bold">
+            <li class="pr-[13px] pl-[10px] border-solid md:border-r-[3px] border-r-[grey] "><a
+                href="https://www.un.org/en/site-index">A-Z Site Index</a></li>
+            <li class="pr-[13px] pl-[10px] border-solid md:border-r-[3px] border-r-[grey] "><a
+                href="https://www.un.org/en/contact-us-0">Contact</a></li>
+            <li class="pr-[13px] pl-[10px] border-solid md:border-r-[3px] border-r-[grey] "><a
+                href="https://www.un.org/en/about-us/copyright">Copyright</a></li>
+            <li class="pr-[13px] pl-[10px] border-solid md:border-r-[3px] border-r-[grey] "><a
+                href="https://www.un.org/en/about-us/frequently-asked-questions">FAQ</a></li>
+            <li class="pr-[13px] pl-[10px] border-solid md:border-r-[3px] border-r-[grey] "><a
+                href="https://www.un.org/en/about-us/fraud-alert">Fraud Alert</a></li>
+            <li class="pr-[13px] pl-[10px] border-solid md:border-r-[3px] border-r-[grey] "><a
+                href="https://www.un.org/en/about-us/privacy-notice">Privacy Notice</a>
+            </li>
+            <li class="pr-[13px] pl-[10px] last"><a href="https://www.un.org/en/about-us/terms-of-use">Terms of
+                Use</a>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /row -->
+    </footer>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

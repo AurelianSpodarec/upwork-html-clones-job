@@ -1,0 +1,104 @@
+@font-face {
+  font-family: Avenir-LT-W01_35-Light1475496;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2) format("woff2"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Avenir-LT-W01_85-Heavy1475544;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2) format("woff2"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_fef7e03344ab444aa80e00eb1;
+  src: url(https://static.wixstatic.com/ufonts/9f6de3_fef7e03344ab444aa80e00eb19c41e51/woff2/file.woff2) format("woff2"), url(https://static.wixstatic.com/ufonts/9f6de3_fef7e03344ab444aa80e00eb19c41e51/woff/file.woff) format("woff"), url(https://static.wixstatic.com/ufonts/9f6de3_fef7e03344ab444aa80e00eb19c41e51/ttf/file.ttf) format("ttf")
+}
+
+
+/* Used for nav? */
+@font-face {
+  font-display: swap;
+  font-family: FontNav;
+  src: url(https://static.wixstatic.com/ufonts/234f58_4483fabebe464a99a3335837a7f28c98/woff2/file.woff2) format("woff2"),
+    url(https://static.wixstatic.com/ufonts/234f58_4483fabebe464a99a3335837a7f28c98/woff/file.woff) format("woff"),
+    url(https://static.wixstatic.com/ufonts/234f58_4483fabebe464a99a3335837a7f28c98/ttf/file.ttf) format("ttf")
+}
+
+@font-face {
+  font-family: Proxima-N-W01-Reg;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2) format("woff2"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Proxima-N-W05-Reg;
+  src: url(http://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/ProximNova/v1/ProximaNovaW05-Regular.woff2) format("woff2"), url(http://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/ProximNova/v1/ProximaNovaW05-Regular.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_87eb49b082754452889aa986c;
+  src: url(https://static.wixstatic.com/ufonts/234f58_87eb49b082754452889aa986ca56b15e/woff2/file.woff2) format("woff2"), url(https://static.wixstatic.com/ufonts/234f58_87eb49b082754452889aa986ca56b15e/woff/file.woff) format("woff"), url(https://static.wixstatic.com/ufonts/234f58_87eb49b082754452889aa986ca56b15e/ttf/file.ttf) format("ttf")
+}
+
+@font-face {
+  font-family: Avenir-LT-W05_35-Light;
+  src: url(http://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-35Light.woff2) format("woff2"), url(http://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-35Light.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Helvetica-W01-Bold;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/f70da45a-a05c-490c-ad62-7db4894b012a.eot?#iefix);
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/f70da45a-a05c-490c-ad62-7db4894b012a.eot?#iefix) format("eot"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/c5749443-93da-4592-b794-42f28d62ef72.woff) format("woff"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/73805f15-38e4-4fb7-8a08-d56bf29b483b.ttf) format("truetype"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/874bbc4a-0091-49f0-93ef-ea4e69c3cc7a.svg#874bbc4a-0091-49f0-93ef-ea4e69c3cc7a) format("svg");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Helvetica-W02-Bold;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/8c0d8b0f-d7d6-4a72-a418-c2373e4cbf27.eot?#iefix);
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/8c0d8b0f-d7d6-4a72-a418-c2373e4cbf27.eot?#iefix) format("eot"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/192dac76-a6d9-413d-bb74-22308f2e0cc5.woff) format("woff"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/47584448-98c4-436c-89b9-8d6fbeb2a776.ttf) format("truetype"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/375c70e5-6822-492b-8408-7cd350440af7.svg#375c70e5-6822-492b-8408-7cd350440af7) format("svg");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Helvetica-LT-W10-Bold;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/9fe262dc-5a55-4d75-91a4-aed76bd32190.eot?#iefix);
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/9fe262dc-5a55-4d75-91a4-aed76bd32190.eot?#iefix) format("eot"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0a3939d0-3833-4db3-8b85-f64c2b3350d2.woff) format("woff"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/1b128d6d-126f-4c9c-8f87-3e7d30a1671c.ttf) format("truetype"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b791c850-fde1-48b3-adf0-8998d55b0866.svg#b791c850-fde1-48b3-adf0-8998d55b0866) format("svg");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Avenir-LT-W05_85-Heavy;
+  src: url(http://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-85Heavy.woff2) format("woff2"), url(http://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Avenir_Family_Pack/v1/AvenirLTW05-85Heavy.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Helvetica-W01-Light;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/717f8140-20c9-4892-9815-38b48f14ce2b.eot?#iefix);
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/717f8140-20c9-4892-9815-38b48f14ce2b.eot?#iefix) format("eot"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/03805817-4611-4dbc-8c65-0f73031c3973.woff) format("woff"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d5f9f72d-afb7-4c57-8348-b4bdac42edbb.ttf) format("truetype"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/05ad458f-263b-413f-b054-6001a987ff3e.svg#05ad458f-263b-413f-b054-6001a987ff3e) format("svg");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Helvetica-W02-Light;
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ff80873b-6ac3-44f7-b029-1b4111beac76.eot?#iefix);
+  src: url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ff80873b-6ac3-44f7-b029-1b4111beac76.eot?#iefix) format("eot"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/80c34ad2-27c2-4d99-90fa-985fd64ab81a.woff) format("woff"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b8cb02c2-5b58-48d8-9501-8d02869154c2.ttf) format("truetype"), url(http://static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/92c941ea-2b06-4b72-9165-17476d424d6c.svg#92c941ea-2b06-4b72-9165-17476d424d6c) format("svg");
+  font-display: swap
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_20470300465d468db5d18fb8e;
+  src: url(https://static.wixstatic.com/ufonts/ab8a4b_20470300465d468db5d18fb8e6407a10/woff2/file.woff2) format("woff2"), url(https://static.wixstatic.com/ufonts/ab8a4b_20470300465d468db5d18fb8e6407a10/woff/file.woff) format("woff"), url(https://static.wixstatic.com/ufonts/ab8a4b_20470300465d468db5d18fb8e6407a10/ttf/file.ttf) format("ttf")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: wf_78c63c9c355f45eab67fd32f7;
+  src: url(https://static.wixstatic.com/ufonts/234f58_78c63c9c355f45eab67fd32f7bb20786/woff2/file.woff2) format("woff2"), url(https://static.wixstatic.com/ufonts/234f58_78c63c9c355f45eab67fd32f7bb20786/woff/file.woff) format("woff"), url(https://static.wixstatic.com/ufonts/234f58_78c63c9c355f45eab67fd32f7bb20786/ttf/file.ttf) format("ttf")
+}

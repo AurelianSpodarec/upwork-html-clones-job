@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" sizes="192x192" href="./assets/images/favicon.png" type="image/png">
+  <style>
+    @font-face {
+      font-family: 'Simplon Mono';
+      src: url('./assets/fonts/simplonMono/SimplonMono-Medium.woff2') format('woff2');
+      font-style: 500;
+    }
+
+    @font-face {
+      font-family: 'Basier Circle';
+      src: url('./assets/fonts/basierCircle/BasierCircle-Regular.woff2') format('woff2');
+      font-style: 400;
+    }
+
+    :root {
+      --font-simplon-mono: 'Simplon Mono', monospace;
+      --font-basier-circle: 'Basier Circle', sans-serif;
+    }
+  </style>
+  <style>
+    
+  </style>
+  <link href="./styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Reusable Colors
+    const colors = {
+      brand: "#0065f2",
+      brand700: "#0054ca"
+    };
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: colors.brand,
+            "brand-700": colors.brand700,
+            // HEADER
+            // ==============================
+            header: "#fafafa",
+            button: {
+              primary: {
+                "foreground-default": "#fff",
+                "foreground-hover": "#fff",
+                "bg-default": colors.brand,
+                "bg-hover": colors.brand700
+              }
+            },
+          },
+          fontFamily: {
+            primary: ['var(--font-akkurat)'],
+          },
+        },
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header class="fixed top-0  bg-white z-10 border border-solid justify-between items-center flex w-full h-[67px] md:h-[99px] border-b-[#E6E6E6]">
+    <div></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <a href="" class="block">
+        <div class="h-[49px] md:h-[62px] w-[81px] md:w-[101px] cursor-pointer ">
+          <svg viewBox="0 0 101 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M80.4118 52.9857C80.4016 52.9939 80.3913 53.0014 80.3811 53.0096L80.1091 52.6837C74.5029 57.2947 67.3819 59.7887 60.0332 59.7887C51.624 59.7887 43.7451 56.6142 37.8362 50.7937C31.9274 45.0496 28.6692 37.3399 28.6692 29.1761C28.6692 22.9029 30.5634 16.7803 34.2753 11.6403C37.9121 6.57591 42.9121 2.79672 48.8209 0.604752L48.5941 0C42.6087 2.26765 37.4577 6.12252 33.8209 11.2626C30.0332 16.5533 27.9879 22.7515 27.9879 29.1761C27.9879 37.4906 31.3213 45.3517 37.3818 51.2471C37.9517 51.8021 38.5449 52.3251 39.1482 52.8323L38.3665 53.7418C44.3512 58.8062 52.0784 61.6029 60.0332 61.6029C67.8363 61.6029 75.3359 58.8819 81.3213 54.0445L80.4118 52.9857Z"
+              fill="#0065F2"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M34.5779 10.2796C34.4269 9.7505 34.3511 9.29711 34.3511 8.76804C34.3511 6.50039 35.866 4.45909 38.5932 4.45909C39.1994 4.45909 39.7296 4.53477 40.1841 4.68613C40.6385 4.30841 41.1688 3.93002 41.699 3.62798C40.7902 3.09891 39.7296 2.79688 38.5932 2.79688C35.2599 2.79688 32.4568 5.44224 32.4568 8.76804C32.4568 9.90186 32.8361 11.0357 33.3657 11.9425C33.5174 11.7161 33.6691 11.4891 33.8201 11.3377C34.0477 10.9593 34.3511 10.5823 34.5779 10.2796Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M42.7607 4.3833C42.2305 4.68534 41.776 4.98805 41.3216 5.36577C42.3063 6.12188 42.8366 7.40638 42.8366 8.76724C42.8366 11.0349 41.1699 12.9998 38.5944 12.9998C37.1546 12.9998 36.0182 12.3951 35.2611 11.4126C35.1094 11.6396 34.9577 11.791 34.806 12.0174C34.5791 12.3201 34.3522 12.6221 34.1998 12.9241C35.3369 13.983 36.8519 14.6634 38.5944 14.6634C42.0029 14.6634 44.7308 12.093 44.7308 8.76724C44.7308 7.02867 43.973 5.44145 42.7607 4.3833Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M31.9279 24.1879C31.9279 26.0022 30.8673 27.5894 29.2765 28.1941V29.1766V30.0084C31.852 29.328 33.8214 27.0603 33.8214 24.1879C33.8214 22.1473 32.6857 20.333 31.019 19.1992C30.7915 19.804 30.6398 20.333 30.4129 20.8621C31.3976 21.6939 31.9279 22.9034 31.9279 24.1879Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M28.0629 28.4959H27.6844C25.1089 28.4959 23.3657 26.531 23.3657 24.1877C23.3657 21.9957 24.8813 19.9551 27.6844 19.9551C28.2905 19.9551 28.8966 20.0301 29.3504 20.2571C29.5027 19.7274 29.6538 19.199 29.8813 18.6699C29.1993 18.4429 28.4415 18.2915 27.6844 18.2915C24.2752 18.2915 21.548 20.9376 21.548 24.1877C21.548 27.5891 24.2752 30.1588 27.6844 30.1588H28.0629C28.0629 29.8568 27.9871 29.4784 27.9871 29.1764C27.9871 28.9493 28.0629 28.723 28.0629 28.4959Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M32.0788 35.5252C34.806 35.5252 36.321 37.5658 36.321 39.7578C36.321 41.7227 35.1094 43.4613 33.2152 43.9154C33.5179 44.4444 33.8213 44.8978 34.124 45.4269C36.4727 44.5958 38.2152 42.4788 38.2152 39.7578C38.2152 36.5077 35.4121 33.8623 32.0788 33.8623C31.2458 33.8623 30.4121 34.0137 29.7308 34.3157C29.806 34.8448 29.8819 35.4495 30.0336 35.9786C30.6397 35.6766 31.321 35.5252 32.0788 35.5252Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M27.8354 39.7577C27.8354 38.6239 28.2147 37.5658 28.9718 36.7347C28.8201 36.1299 28.6691 35.5252 28.5933 34.9204C27.0024 35.9786 25.9419 37.7928 25.9419 39.7577C25.9419 43.1599 28.6691 45.7289 32.0783 45.7289C32.3052 45.7289 32.6086 45.7289 32.8361 45.6539C32.5327 45.1248 32.1542 44.5958 31.8507 44.0667C29.4269 43.9153 27.8354 42.1011 27.8354 39.7577Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M61.8517 34.0894V40.968C61.8517 42.5552 61.3214 44.0667 59.2762 44.0667C57.2303 44.0667 56.7 42.5552 56.7 40.968V34.0894H54.8065V41.3457C54.8065 43.8397 56.3973 45.7296 59.2762 45.7296C62.1551 45.7296 63.7452 43.8397 63.7452 41.3457V34.0894H61.8517Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M63.3663 12.8495H68.518V14.4367H61.472V3.02344H63.3663V12.8495Z" fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.0332031 18.5186H6.69988V20.1808H1.92674V22.9025H6.62403V24.5654H1.92674V28.2689H6.69988V29.9318H0.0332031V18.5186Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M37.6844 17.9141L45.5634 26.0015V18.5188H47.4569V30.3855L39.578 22.4494V29.9321H37.6844V17.9141Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M84.6547 18.5186H86.5489V29.9318H84.6547V18.5186Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M18.442 35.7523V38.4733H22.5325V40.0612H18.442V45.5026H16.5485V34.0894H22.6849V35.7523H18.442Z"
+              fill="black">
+            </path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M26.0182 10.1284H26.0941L27.9117 3.02342H29.7308L26.5485 14.8908L22.5332 6.34922L18.5185 14.8908L15.261 3.02342H17.1546L18.973 10.1284L22.5332 2.79639L26.0182 10.1284Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M69.806 22.8271H69.7302L67.9118 29.9321H66.0941L69.2758 18.0654L73.2911 26.682L77.3064 18.0654L80.5639 29.9321H78.6696L76.8513 22.8271H76.7754L73.2911 30.2348L69.806 22.8271Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M70.7903 38.3971L68.9719 45.5021H67.0784L70.26 33.6348L74.3512 42.1763L78.3665 33.6348L81.5474 45.5021H79.6539L77.8355 38.3971L74.3512 45.7291L70.7903 38.3971Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M45.3366 34.0894C46.3972 34.0894 47.6094 34.0894 48.5183 34.6184C49.5036 35.1475 50.1091 36.2813 50.1091 37.3395C50.1091 39.0024 48.9734 40.3632 47.306 40.5139L50.9428 45.5026H48.8217L45.4125 40.6653H44.1244V45.5026H42.2308V34.0894H45.3366ZM44.1244 39.1537H44.958C46.473 39.1537 48.2914 39.2287 48.2914 37.4152C48.2914 35.6009 46.3972 35.6766 44.8822 35.6766H44.1244V39.1537Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M51.7753 3.02344C52.8359 3.02344 54.0481 3.02344 54.957 3.55251C55.9424 4.08158 56.4719 5.21541 56.4719 6.27355C56.4719 7.93713 55.4121 9.29732 53.6696 9.44799L57.3815 14.4367H55.2604L51.7753 9.59935H50.5631V14.4367H48.6696V3.02344H51.7753ZM50.5631 8.08781H51.3968C52.9117 8.08781 54.6543 8.16349 54.6543 6.34923C54.6543 4.53498 52.76 4.61134 51.3209 4.61134H50.5631V8.08781Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M73.7453 12.8495H74.8058C77.3062 12.8495 79.6542 11.942 79.6542 8.69188C79.6542 5.36609 77.3062 4.61066 74.8058 4.61066H73.7453V12.8495ZM71.8511 3.02344H74.9569C78.5936 3.02344 81.5484 4.76133 81.5484 8.69188C81.5484 12.6224 78.6695 14.4367 74.9569 14.4367H71.8511V3.02344Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M99.0485 27.9669C98.4424 28.3446 97.7604 28.4959 96.9274 28.4959C94.4271 28.4959 92.6852 26.606 92.6852 24.2627C92.6852 21.9957 94.2002 19.9544 96.9274 19.9544C97.7604 19.9544 98.4424 20.1058 99.0485 20.4078L99.9574 19.0476C99.1244 18.5942 98.0638 18.2915 96.9274 18.2915C93.5941 18.2915 90.791 20.9376 90.791 24.2627C90.791 27.5891 93.5941 30.1588 96.9274 30.1588C98.0638 30.1588 99.1244 29.9318 100.033 29.4027L99.0485 27.9669Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M18.5182 27.9669C17.9121 28.3446 17.2301 28.4959 16.473 28.4959C13.8968 28.4959 12.1542 26.606 12.1542 24.2627C12.1542 21.9957 13.6692 19.9544 16.473 19.9544C17.2301 19.9544 17.9121 20.1058 18.5182 20.4078L19.5029 19.0476C18.594 18.5942 17.5328 18.2915 16.473 18.2915C13.0638 18.2915 10.3365 20.9376 10.3365 24.2627C10.3365 27.5891 13.0638 30.1588 16.473 30.1588C17.5328 30.1588 18.594 29.9318 19.5029 29.4027L18.5182 27.9669Z"
+              fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M61.7754 24.2632C61.7754 21.9955 60.2605 19.9549 57.5333 19.9549C54.7302 19.9549 53.2145 21.9955 53.2145 24.2632C53.2145 26.6065 54.9571 28.4957 57.5333 28.4957C60.0329 28.4957 61.7754 26.6065 61.7754 24.2632ZM63.6697 24.2632C63.6697 27.589 60.8659 30.1593 57.5333 30.1593C54.1241 30.1593 51.3969 27.589 51.3969 24.2632C51.3969 20.9374 54.1241 18.292 57.5333 18.292C60.8659 18.292 63.6697 20.9374 63.6697 24.2632Z"
+              fill="black"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="" class="hidden sm:block mr-16 align-center gap-4">
+        <button type="button" class="text-button-primary-foreground-default bg-button-primary-bg-default hover:bg-button-primary-bg-hover border border-brand hover:border-brand-700 transition duration-[250ms] ease-in-out rounded-full h-10 px-6 font-bold">
+          Join us
+        </button>
+      </a>
+    </div>
+  </header>
+  <main class="pt-[99px]">
+    <section>
+      <div class="relative isolate">
+      
+        <div class="py-24 sm:py-32 lg:pb-40">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <div class="mx-auto max-w-2xl text-center">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Ask any question to chat bot about WEF</h1>
+              <p class="mt-6 text-lg leading-8 text-gray-600">Chatbox is powered with AI and has the ability to answer any questions about the website and World Economic Forum. </p>
+              <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a href="#chatbox" class="flex items-center text-button-primary-foreground-default bg-button-primary-bg-default hover:bg-button-primary-bg-hover border border-brand hover:border-brand-700 transition duration-[250ms] ease-in-out rounded-full h-10 px-6 font-bold">Try chatbox now</a>
+              </div>
+            </div>
+
+            <div id="chatbox" class="flow-root sm:mt-24">
+              
+              <div class="h-[500px] mt-[99px]">
+Chatbox
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="relative py-10 text-base bg-black border-[1px] border-white/25">
+    <div class="px-16 gap-0 grid grid-cols-1 md:grid-cols-12 mb-10 mx-auto max-w-[90rem] w-full gap-6">
+      <div class="wef-fd29nh col-span-3 row-span-2">
+        <section class="wef-1161qt5">
+          <p id="footer-link-title" class="mb-4 text-base tracking-[1.3px] uppercase text-[#B3B3B3] font-bold">About Us</p>
+          <div class="wef-0">
+            <ul role="list">
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/about/world-economic-forum/"><span class="chakra-text wef-lrnawd">Our
+                    Mission</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/impact"><span class="chakra-text wef-lrnawd">Our Impact</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/about/leadership-and-governance/"><span
+                    class="chakra-text wef-lrnawd">Leadership and Governance</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/forum-statements/"><span class="chakra-text wef-lrnawd">Forum
+                    Statements</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/partners"><span class="chakra-text wef-lrnawd">Partners</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/sustainability-world-economic-forum"><span
+                    class="chakra-text wef-lrnawd">Sustainability at the
+                    Forum</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/about/history/"><span class="chakra-text wef-lrnawd">History</span></a>
+              </li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/forum-careers"><span class="chakra-text wef-lrnawd">Careers</span></a>
+              </li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/contact-us"><span class="chakra-text wef-lrnawd">Contact Us</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="wef-1qghwun col-span-3 row-span-2">
+        <section class="mb-10">
+          <p id="footer-link-title" class="mb-4 text-base tracking-[1.3px] uppercase text-[#B3B3B3] font-bold">Events</p>
+          <div class="wef-0">
+            <ul role="list">
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/events/"><span class="chakra-text wef-lrnawd">Events</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/open-forum/"><span class="chakra-text wef-lrnawd">Open Forum</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="">
+          <p id="footer-link-title" class="mb-4 text-base tracking-[1.3px] uppercase text-[#B3B3B3] font-bold">Media</p>
+          <div class="wef-0">
+            <ul role="list">
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/press/"><span class="chakra-text wef-lrnawd">Press</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://weforum.us3.list-manage.com/subscribe/?u=6308fe51b420dc9ff3834abc8&amp;id=bf3fa00e64"><span
+                    class="chakra-text wef-lrnawd">Subscribe to our press releases</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.flickr.com/photos/worldeconomicforum/"><span
+                    class="chakra-text wef-lrnawd">Pictures</span></a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="wef-1qghwun col-span-3 row-span-2">
+        <section class="wef-1161qt5">
+          <p id="footer-link-title" class="mb-4 text-base tracking-[1.3px] uppercase text-[#B3B3B3] font-bold">More from the Forum
+          </p>
+          <div class="wef-0">
+            <ul role="list">
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://intelligence.weforum.org"><span class="chakra-text wef-lrnawd">Strategic
+                    Intelligence</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://uplink.weforum.org/uplink/s?utm_source=Weforum&amp;utm_medium=Footer&amp;utm_campaign=Weforum_Footer_UpLink_to_Homepage"><span
+                    class="chakra-text wef-lrnawd">UpLink</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.globalshapers.org"><span class="chakra-text wef-lrnawd">Global Shapers</span></a>
+              </li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.younggloballeaders.org"><span class="chakra-text wef-lrnawd">Young Global
+                    Leaders</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.schwabfound.org"><span class="chakra-text wef-lrnawd">Schwab Foundation for Social
+                    Entrepreneurship</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/centre-for-the-fourth-industrial-revolution"><span
+                    class="chakra-text wef-lrnawd">Centre for
+                    the Fourth Industrial Revolution</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.newchampions.org/"><span class="chakra-text wef-lrnawd">New Champions</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="wef-wxcam2 col-span-3 row-span-1">
+        <section class="wef-1161qt5">
+          <p id="footer-link-title" class="mb-4 text-base tracking-[1.3px] uppercase text-[#B3B3B3] font-bold">Partners &amp;
+            Members</p>
+          <div class="wef-0">
+            <ul role="list">
+              <li class="mb-2 leading-[1.6]"><button type="button" class="cursor-pointer text-white">Sign in</button>
+              </li>
+              <li class="mb-2 leading-[1.6]"><a class="cursor-pointer text-white"
+                  href="https://www.weforum.org/join-us/"><span class="chakra-text">Join Us</span></a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="pt-10">
+          <p id="footer-link-title" class="mb-4 text-base tracking-[1.3px] uppercase text-[#B3B3B3] font-bold">Language Editions
+          </p>
+          <div class="wef-0">
+            <ul role="list">
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://www.weforum.org/"><span class="chakra-text wef-lrnawd">English</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://es.weforum.org/"><span class="chakra-text wef-lrnawd">Español</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://cn.weforum.org/"><span class="chakra-text wef-lrnawd">中文</span></a></li>
+              <li class="mb-2 leading-[1.6]"><a class="chakra-link wef-1c7l3mo cursor-pointer my-4 text-white"
+                  href="https://jp.weforum.org/"><span class="chakra-text wef-lrnawd">日本語</span></a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <hr class="my-6 w-auto border-solid border-bottom-[1px] border-white/50 w-auto opacity-60" />
+    <div class="flex flex-wrap items-center justify-center gap-6 flex-row " data-gtm-subcontext="social-links">
+      <a target="_blank" class="text-white fill-white" href="https://www.facebook.com/worldeconomicforum/"><svg
+          viewBox="0 0 28 28" focusable="false" class="inline-block h-[1.625rem] w-[1.625em] " aria-label="Facebook">
+          <path
+            d="M28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 20.9877 5.11957 26.7796 11.8125 27.8299V18.0469H8.25781V14H11.8125V10.9156C11.8125 7.40688 13.9027 5.46875 17.1005 5.46875C18.6318 5.46875 20.2344 5.74219 20.2344 5.74219V9.1875H18.4691C16.73 9.1875 16.1875 10.2668 16.1875 11.375V14H20.0703L19.4496 18.0469H16.1875V27.8299C22.8804 26.7796 28 20.9877 28 14Z"
+            fill="currentColor"></path>
+        </svg></a><a target="_blank" class="text-white fill-white" href="https://twitter.com/wef"><svg
+          viewBox="0 0 28 28" focusable="false" class="inline-block h-[1.625rem] w-[1.625em] " aria-label="Twitter">
+          <path
+            d="M16.5918 11.8561L26.7337 0H24.3304L15.5242 10.2945L8.49064 0H0.378296L11.0144 15.5671L0.378296 28H2.78175L12.0814 17.1287L19.5093 28H27.6216L16.5912 11.8561H16.5918ZM13.2999 15.7042L12.2223 14.1541L3.64775 1.81955H7.33931L14.2591 11.7739L15.3367 13.324L24.3316 26.2632H20.64L13.2999 15.7048V15.7042Z"
+            fill="currentColor"></path>
+        </svg></a><a target="_blank" class="text-white fill-white"
+        href="https://www.linkedin.com/company/world-economic-forum"><svg viewBox="0 0 28 28" focusable="false"
+          class="inline-block h-[1.625rem] w-[1.625em] " aria-label="LinkedIn">
+          <path
+            d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602Z"
+            fill="currentColor"></path>
+        </svg></a><a target="_blank" class="text-white fill-white" href="https://flipboard.com/@WEF"><svg
+          viewBox="0 0 28 28" focusable="false" class="inline-block h-[1.625rem] w-[1.625em] " aria-label="Flipboard">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M28 0H0V28H28V0ZM16.8001 11.2H22.4001V5.59998H5.6001V22.4H11.2001V16.8H16.8001V11.2Z"
+            fill="currentColor"></path>
+        </svg></a><a target="_blank" class="text-white fill-white"
+        href="https://www.instagram.com/worldeconomicforum/"><svg viewBox="0 0 26 26" focusable="false"
+          class="inline-block h-[1.625rem] w-[1.625em] " aria-label="Instagram">
+          <path
+            d="M12.9992 6.2378c-3.6693 0-6.7096 2.9879-6.7096 6.7097a6.6891 6.6891 0 006.7096 6.7096c3.7218 0 6.7097-3.0403 6.7097-6.7096 0-3.6694-3.0403-6.7097-6.7097-6.7097zm0 11.0081c-2.3588 0-4.2984-1.9396-4.2984-4.2984 0-2.3589 1.9396-4.2984 4.2984-4.2984 2.3589 0 4.2984 1.9395 4.2984 4.2984 0 2.3588-1.9395 4.2984-4.2984 4.2984zM19.9733 7.6009c.8396 0 1.5202-.6806 1.5202-1.5202s-.6806-1.5202-1.5202-1.5202-1.5202.6806-1.5202 1.5202.6806 1.5202 1.5202 1.5202z"
+            fill="currentColor"></path>
+          <path
+            d="M23.9032 2.1492C22.5403.7339 20.6008 0 18.3992 0H7.6008C3.0403 0 0 3.0403 0 7.6008v10.746c0 2.254.7339 4.1935 2.2016 5.6088C3.617 25.3186 5.504 26 7.6532 26h10.6936c2.254 0 4.1411-.7339 5.504-2.0444C25.2661 22.5927 26 20.6532 26 18.3992V7.6008c0-2.2016-.7339-4.0887-2.0968-5.4516zm-.2097 16.25c0 1.625-.5766 2.9355-1.5201 3.8266-.9436.8911-2.254 1.3629-3.8266 1.3629H7.6532c-1.5725 0-2.883-.4718-3.8266-1.3629-.9435-.9435-1.4153-2.254-1.4153-3.879V7.6008c0-1.5726.4718-2.883 1.4153-3.8266.8911-.8911 2.254-1.363 3.8266-1.363h10.7984c1.5726 0 2.8831.4719 3.8266 1.4154.8912.9436 1.4153 2.254 1.4153 3.7742v10.7984z"
+            fill="currentColor"></path>
+        </svg></a><a target="_blank" class="text-white fill-white" href="https://www.youtube.com/@wef"><svg
+          viewBox="0 0 461 461" focusable="false" class="inline-block h-[1.625rem] w-[1.625em] " aria-label="Youtube">
+          <path fill="currentColor" fill-rule="nonzero"
+            d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z">
+          </path>
+        </svg></a><a target="_blank" class="text-white fill-white"
+        href="https://www.tiktok.com/@worldeconomicforum"><svg viewBox="0 0 25 28" focusable="false"
+          class="inline-block h-[1.625rem] w-[1.625em] " aria-label="TikTok">
+          <path
+            d="M17.9181 0H13.1993V19.0724C13.1993 21.3449 11.3844 23.2116 9.1258 23.2116C6.86722 23.2116 5.0523 21.3449 5.0523 19.0724C5.0523 16.8406 6.82689 15.0145 9.00483 14.9333V10.1449C4.20533 10.2261 0.333496 14.1623 0.333496 19.0724C0.333496 24.0232 4.286 28 9.16615 28C14.0462 28 17.9987 23.9826 17.9987 19.0724V9.29273C19.7733 10.5913 21.9512 11.3623 24.2502 11.4029V6.61449C20.701 6.49276 17.9181 3.57101 17.9181 0Z"
+            fill="currentColor"></path>
+        </svg></a><a target="_blank" class="text-white fill-white"
+        href="https://www.threads.net/@worldeconomicforum"><svg viewBox="0 0 192 192" focusable="false"
+          class="inline-block h-[1.625rem] w-[1.625em] " aria-label="Thrads">
+          <path
+            d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"
+            fill="currentColor"></path>
+        </svg></a>
+    </div>
+    <hr class="my-6 w-auto border-solid border-bottom-[1px] border-white/50 w-auto opacity-60" />
+    <section class="px-16 max-w-[90rem] mt-10 mx-auto">
+      <p class="my-2 leading-[1.388] text-center block text-base text-white"><a class="cursor-pointer hover:underline"
+          href="/about/privacy-and-terms-of-use">Privacy Policy &amp; Terms of Service</a></p>
+      <p class="my-2 leading-[1.388] text-center block text-[#B3B3B3]">© <!-- -->2024<!-- --> <!-- -->World Economic Forum</p>
+    </section>
+  </footer>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

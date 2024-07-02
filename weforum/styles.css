@@ -1,0 +1,131 @@
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Light.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-LightItalic.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Bold.woff") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Bold.woff2") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-BoldItalic.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Black.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-BlackItalic.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Adaptation to support Global Navigation */
+
+@font-face {
+  font-family: "AkkuratLLWeb";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Regular";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Italic";
+  src: url("./assets/fonts") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Light";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Light.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Bold";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Bold.woff") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Bold.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-BoldItalic";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-BoldItalic.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-Black";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-Black.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AkkuratLLWeb-BlackItalic";
+  src: url("./assets/fonts/Akkurat/AkkuratLLWeb-BlackItalic.woff2") format("woff2"),
+    url("./assets/fonts/Akkurat/AkkuratLLWeb-BlackItalic.woff") format("woff");
+}
+
+body.akkurat h1,
+body.akkurat h2,
+body.akkurat h3,
+body.akkurat h4,
+body.akkurat h5,
+body.akkurat h6 {
+  font-weight: 900;
+}
+
+:root {
+  --font-akkurat: "AkkuratLLWeb", sans-serif;
+}
+
+body {
+  font-family: "AkkuratLLWeb", sans-serif;
+}
