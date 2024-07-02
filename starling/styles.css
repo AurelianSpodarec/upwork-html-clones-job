@@ -1,0 +1,578 @@
+@font-face {
+  font-family: "ForzaMedium";
+  src: url("./assets/fonts/Forza-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ForzaLight";
+  src: url("./assets/fonts/Forza-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: "ForzaMedium", "ForzaLight", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+#root {
+  max-width: 100vw;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.chat-header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  padding-left: 100px;
+  padding-top: 6px;
+
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, #14abb2, #2e598c);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  border-width: 0px 0px 2px 0px;
+}
+
+.main-div {
+  height: calc(100vh - 80px);
+  width: 100%;
+  padding: 0px 70px 70px 70px;
+}
+
+.main-div-top {
+  height: 100px;
+  width: 100%;
+  padding: 32px 0px;
+  display: flex;
+  gap: 20px;
+}
+
+.main-div-top-left {
+  width: 50%;
+}
+
+.gradient-button {
+  background-image: linear-gradient(to left, #006175 0%, #14abb2 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: black;
+  padding: 2px 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-button:hover {
+  color: #fff;
+}
+
+.gradient-button span {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.gradient-button:hover span {
+  background: transparent;
+}
+
+.button-active span {
+  background: transparent;
+  color: white;
+}
+
+.main-div-top-right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.main-body {
+  height: calc(100% - 100px);
+  display: flex;
+  gap: 20px;
+}
+
+.main-body-left {
+  background-color: #dfecf2;
+  width: 50%;
+  height: 100%;
+}
+
+.main-body-left-chat {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body-left-chat>p {
+  font-size: 21px;
+  width: 70%;
+  text-align: center;
+  color: #14abb2;
+  font-weight: bolder;
+}
+
+.main-body-left-chat>div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fixed-width-gradient-button {
+  width: 380px;
+}
+
+.fixed-width-gradient-button span {
+  background-color: #dfecf2;
+}
+
+.main-body-left-bottom {
+  height: 60px;
+  width: 100%;
+  display: flex;
+
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right, #14abb2, #2e598c);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  border-width: 2px 0px 0px 0px;
+}
+
+.main-body-left-bottom>div {
+  width: 100%;
+}
+
+.uparrow-button {
+  margin: auto 10px;
+}
+
+.main-body-right {
+  width: 50%;
+  height: 100%;
+
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #14abb2, #2e598c);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  border-width: 2px 2px 2px 2px;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  padding-left: 100px;
+  padding-top: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.main-top img {
+  height: 960px;
+  margin-top: -80px;
+  width: 100%;
+}
+
+.main-top {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+.main-top-over {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+
+.main-top-text {
+  text-align: center;
+  color: white;
+  margin: 0px auto;
+  width: 70vw;
+}
+
+.main-top-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 0px;
+}
+
+.main-top-text p {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.main-top-bottom {
+  width: 70vw;
+  height: 650px;
+  background-color: #dfecf2;
+  margin: 0px auto;
+  text-align: center;
+  padding: 35px;
+}
+
+.main-top-bottom h3 {
+  font-size: 1.5rem;
+  padding: 30px 0px;
+}
+
+.main-chat {
+  padding: 20px 10px;
+  height: 350px;
+  background-color: white;
+  color: #14abb2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.main-chat::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-chat::-webkit-scrollbar-track {
+  background-color: #e1e1e1;
+  border-radius: 6px;
+}
+
+.main-chat::-webkit-scrollbar-thumb {
+  background-color: #14abb2;
+  border-radius: 6px;
+}
+
+.main-chat::-webkit-scrollbar-thumb:hover {
+  background-color: #006175;
+}
+
+.chat-line {
+  display: flex;
+}
+
+.user-chat {
+  justify-content: left;
+}
+
+.user-chat>.chat-msg {
+  background-color: #14abb2;
+}
+
+.bot-chat {
+  justify-content: right;
+}
+
+.bot-chat>.chat-msg {
+  background-color: #006175;
+}
+
+.chat-msg {
+  padding: 10px 20px;
+  background-color: #14abb2;
+  color: white;
+  border-radius: 20px;
+  max-width: 75%;
+  text-align: left;
+}
+
+.main-chat-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right, #14abb2, #2e598c);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  border-width: 2px 0px 0px 0px;
+}
+
+.main-chat-bottom>div:first-child {
+  width: 100%;
+}
+
+.prompt-input {
+  width: 100%;
+  background-color: white;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.prompt-input:focus {
+  outline: #14abb2;
+}
+
+.send-button {
+  margin: auto 10px;
+}
+
+.main-top-bottom>div:last-child {
+  padding: 40px 0px;
+}
+
+.main-top-bottom-select {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-second {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.main-second>div {
+  height: 750px;
+  width: 50%;
+  display: block;
+}
+
+.main-second div>p:first-child {
+  color: white;
+  margin-top: 100px;
+  padding: 8.5px;
+  padding-right: 15px;
+  width: 40%;
+  text-align: right;
+  border-radius: 0 18px 18px 0;
+  background-image: linear-gradient(to right, #14abb2, #2e598c);
+}
+
+.main-second div>h3 {
+  color: #14abb2;
+  padding: 30px 15px 30px 100px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.main-second div>p {
+  padding: 0px 15px 30px 100px;
+  font-size: 1.2rem;
+}
+
+.main-second div>div>h4:first-child {
+  width: 100%;
+  font-size: 22px;
+  padding: 0px 15px 0px 100px;
+}
+
+.main-second div>div>h5 {
+  width: 100%;
+  font-family: "ForzaLight";
+  color: #455864;
+  font-size: 17px;
+  padding: 0px 15px 30px 100px;
+}
+
+.main-second div>img {
+  height: 314px;
+  width: 50%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.main-second>img {
+  height: 750px;
+  display: block;
+  width: 50%;
+}
+
+.main-three {
+  position: relative;
+  display: flex;
+}
+
+.main-three-left {
+  width: 50%;
+  height: 576px;
+}
+
+.main-three-left div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(50, 50, 50, 0.85));
+  height: 576px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-three-left div>h3 {
+  color: #14abb2;
+  font-size: 1.8rem;
+  width: 70%;
+}
+
+.main-three-left div>p {
+  color: white;
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+.main-three-left img {
+  height: 576px;
+  width: 100%;
+}
+
+.main-three-right {
+  width: 50%;
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-three-right>h3 {
+  color: #14abb2;
+  font-size: 1.8rem;
+  width: 70%;
+}
+
+.main-three-right>p {
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+.footer {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer>div {
+  width: 75%;
+  border: 3px solid #14abb2;
+  background-color: #dfecf2;
+  height: 220px;
+  padding: 40px;
+}
+
+.footer>div>h3 {
+  font-size: 1.8rem;
+
+  color: #14abb2;
+}
+
+.footer>div>h4 {
+  font-size: 1.1rem;
+  padding: 10px 0px;
+}
+
+.gradient-button {
+  background-image: linear-gradient(to left, #006175 0%, #14abb2 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: black;
+  padding: 2px 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-button:hover {
+  color: #fff;
+}
+
+.gradient-button span {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.gradient-button:hover span {
+  background: transparent;
+}
+
+.button-active span {
+  background: transparent;
+  color: white;
+}
