@@ -32,24 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatBox = document.querySelector(".chat-box");
     chatBox.innerHTML = messages
       ? messages
-          .map((message) => {
-            return `<div class="message ${
-              message.sender === "user" ? " text-red-500" : "bot"
-            }">
-              <div class="message-content">${message.text}</div>
-            </div>`;
-          })
-          .join("")
-      : `<div class="message bot">
-          <div class="message-content">
-            Here are some pro tips to maximize the effectiveness of using an AI language model (LLM) chatbot for obtaining the best answers:
-            <ul>
-              <li><strong>Provide Context:</strong> Give background information that could influence the answer.</li>
-              <li><strong>Be Specific:</strong> Clearly define your question or problem. Specific details can help the AI provide more accurate and relevant responses.</li>
-              <li><strong>Break Down Complex Questions:</strong> If you have a multi-part question, consider breaking it down into simpler, more direct questions. Use follow-up questions if the first response does not completely address your needs.</li>
-            </ul>
-          </div>
-        </div>`;
+        .map((message) => {
+          if (message.sender === "user") {
+            return `
+            <div id="js-message-user" class="flex w-full justify-end"><div id="js-messaage-user-content" class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary">${message.text}</div></div>  
+            `;
+          } else {
+            return `
+            <div id="js-message-ai" class="flex-start flex gap-3 text-base juice:gap-4 juice:md:gap-5 juice:lg:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]"><div class="flex-shrink-0 flex flex-col relative items-end"><div class="border border-gray-300 rounded-full overflow-hidden p-1 mt-2.5"><img src="https://starlingtrust.com/libreria/imagenes/preloader.gif?v=2" class="h-8 w-8"></div></div><div id="js-message-ai-content" class="bg-white relative flex w-full min-w-0 flex-col agent-turn">
+            ${message.text}
+    </div></div>  
+            `;
+          }
+        })
+        .join("")
+      : `<div id="js-chat-start" class="text-center m-auto"><img src="https://starlingtrust.com/libreria/imagenes/preloader.gif?v=2" class="h-20 w-20 mx-auto"><div><h2 class="text-3xl">Welcome to Starling Advisor AI</h2><p> Ask me anything about Starling, and I'll provide you with the information you need!</p></div></div>`;
   }
 
   function sendPrompt(user_input) {
