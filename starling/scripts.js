@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollDomToBottom("user");
 
     
+    // https://starling-api.fly.dev/chat
+    // https://true-response.fly.dev/api/v1/chat
+    // http://localhost:8000/api/v1/chat
     fetch("https://true-response.fly.dev/api/v1/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -73,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.metadata)
-        let links = data.metadata.map(item => item.file_name)
+        let links = data.metadata.map(item => item.filename)
         console.log(links)
         response = data.response + "\n\nReferences:\n\n" + links.join("\n\n");
         messages.push({ id: messages.length, text: response, sender: "bot" });
