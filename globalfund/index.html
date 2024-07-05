@@ -125,47 +125,60 @@
             class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 gap-2 [&amp;>svg]:max-w-[theme(spacing.8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover w-full h-[46px] bg-[#F7F7F7] rounded-[3px] text-black text-[14.5px]"
             type="button">LFA resources</button><button
             class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 gap-2 [&amp;>svg]:max-w-[theme(spacing.8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover w-full h-[46px] bg-[#F7F7F7] rounded-[3px] text-black text-[14.5px]"
-            type="button">CCM Resources</button></div>
+            type="button">CCM Resources</button>
+        </div>
         <div class="w-[80%] h-[500px] bg-[#F7F7F7]">
-          <div class="h-[437px] p-[20px] overflow-y-auto custom-scrollbar">
-            <div class="w-full flex justify-end gap-[10px] items-center  mb-[20px] ">
-              <div
-                class="bg-white border-[#2E4DF9] border w-[75%] text-black p-[10px] rounded-[10px] text-[13px] flex flex-col gap-[6px]">
-                <p>Here are some pro tips to maximize the effectiveness of using an AI language model (LLM) chatbot for
-                  obtaining the best answers:</p>
-                <p><span class="text-[#2E4DF9] font-extrabold">Provide Context</span>: Give background information that
-                  could influence the answer.</p>
-                <p><span class="text-[#2E4DF9] font-extrabold">Be Specific</span>: Clearly define your question or
-                  problem. Specific details can help the AI provide more accurate and relevant responses.</p>
-                <p><span class="text-[#2E4DF9] font-extrabold">Break Down Complex Questions</span>: If you have a
-                  multi-part question, consider breaking it down into simpler, more direct questions. Use follow-up
-                  questions if the first response does not completely address your needs.</p>
-              </div><img alt="logo_icon" loading="lazy" width="33" height="36" decoding="async" data-nimg="1"
-                style="color:transparent"
-                src="./assets/images/logo_icon.png">
-            </div>
-          </div>
-          <div
-            class="group flex flex-col group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] w-full"
-            data-slot="base" data-filled="true" data-filled-within="true">
-            <div data-slot="main-wrapper" class="h-full flex flex-col">
-              <div data-slot="input-wrapper"
-                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-[63px] bg-[#F7F7F7] border-t border-black rounded-none pl-[20px] pr-[10px]"
-                style="cursor:text">
-                <div data-slot="inner-wrapper" class="inline-flex w-full items-center h-full box-border"><input
-                    data-slot="input" data-has-end-content="true"
-                    class="w-full font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 group-data-[has-value=true]:text-default-foreground h-full text-[14px] placeholder:text-[#A7A7A7]"
-                    aria-label="Type your question ..." type="text" placeholder="Type your question ..."
-                    id="react-aria-:R5aficq:" value="" title="">
-                  <div class="flex gap-[10px]"><img alt="upload" loading="lazy" width="40" height="40" decoding="async"
-                      data-nimg="1" style="color:transparent" src="/upload.svg"><button
-                      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 px-0 !gap-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground min-w-10 data-[hover=true]:opacity-hover w-[50px] h-[50px] bg-transparent rounded-[5px]"
-                      type="button"><img alt="send" loading="lazy" width="40" height="40" decoding="async" data-nimg="1"
-                        style="color:transparent" src="./assets/images/send.svg"></button></div>
+          <!-- <div class="h-[437px] p-[20px] overflow-y-auto custom-scrollbar"> -->
+              
+
+                
+
+        <div id="js-chat-box" class="bg-white h-full rounded-xl border border-blue-200">
+          <div class="flex flex-col h-full">
+            
+            <div class="px-6 pt-6 pb-6 h-full">
+              <div id="js-chat-view" class="h-full overflow-x-hidden">
+                <div id="js-chat-view-list" class="h-full chat-box min-h-[20px] flex flex-col items-start whitespace-pre-wrap break-words juice:w-full juice:items-end overflow-x-auto gap-2">
+                  
                 </div>
               </div>
             </div>
+    
+            <div class="mx-6 mt-auto pb-6">
+              <div id="js-message-form-view" class="border border-[#e4e4e4] mt-auto flex w-full flex-col gap-1.5 rounded-[8px] p-1.5 transition-colors bg-[#f4f4f4] dark:bg-token-main-surface-secondary">
+                
+                <div class="flex items-center gap-1.5 md:gap-2">
+                  <div class="flex min-w-0 flex-1 flex-col">
+                    <input id="user-input"
+                    placeholder="Ask Global Fund Advisor"
+                    class="px-3 border-none resize-none h-10 overflow-y-hidden max-h-[25vh] bg-transparent outline-none focus:border-none active:border-none">
+                  </div>
+           
+                <button id="send-button" class="bg-gray-300 rounded-lg mr-2 p-1">
+                  <div class="flex items-center h-5 w-5">
+                    <svg id="button-send-icon" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 32 32" class="icon-2xl">
+                      <path fill="currentColor" fill-rule="evenodd"
+                        d="M15.192 8.906a1.143 1.143 0 0 1 1.616 0l5.143 5.143a1.143 1.143 0 0 1-1.616 1.616l-3.192-3.192v9.813a1.143 1.143 0 0 1-2.286 0v-9.813l-3.192 3.192a1.143 1.143 0 1 1-1.616-1.616z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="button-send-icon-loading" class="w-full h-full hidden animate-spin text-black select-none pointer-events-none" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+              
+              
           </div>
+        </div>
+
+
+
+            <!-- </div> -->
+          </div>
+       
         </div>
       </div>
       <div class="px-[130px] mt-[60px] flex flex-col gap-[60px]">
