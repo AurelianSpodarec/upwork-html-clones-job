@@ -64,14 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
     updateMessages();
     scrollDomToBottom("user");
 
-    fetch("https://starling-api.fly.dev/chat/gf", {
+    
+    // https://starling-api.fly.dev/chat
+    // https://true-response.fly.dev/api/v1/chat
+    // http://localhost:8000/api/v1/chat
+    fetch("https://true-response.fly.dev/api/v1/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ memory_id: memoryID, user_input: user_input })
+      body: JSON.stringify({ memory_id: memoryID, request: user_input })
     })
       .then((response) => response.json())
       .then((data) => {
-        let links = data.source_nodes;
+        console.log(data.metadata)
+        let links = data.metadata.map(item => item.filename)
+        console.log(links)
         response = data.response + "\n\nReferences:\n\n" + links.join("\n\n");
         messages.push({ id: messages.length, text: response, sender: "bot" });
         updateMessages();
